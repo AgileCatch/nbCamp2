@@ -41,15 +41,29 @@ class HomePage extends StatelessWidget {
                 MaterialPageRoute(builder: (_) => DetailPage()),
               );
             },
-            icon: Icon(CupertinoIcons.search, color: Colors.black),
+            icon: Icon(CupertinoIcons.scissors, color: Colors.black),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu_rounded, color: Colors.black),
+            icon: Icon(Icons.delete, color: Colors.black),
           ),
         ],
       ),
-      body: Center(child: Text("메모를 작성해주세요")),
+      body: Row(
+        children: [
+          // 이미지 들어갈 자리
+          Column(
+            children: [
+              //
+              Row(
+                children: [
+                  // 빈 칸
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: () {
