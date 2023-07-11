@@ -11,19 +11,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: ServicePage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class ServicePage extends StatelessWidget {
+  const ServicePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text("home page"),
+      appBar: AppBar(
+        leading: Row(
+          children: [
+            SizedBox(width: 16),
+            Text(
+              'back',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.normal,
+                fontSize: 17,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
