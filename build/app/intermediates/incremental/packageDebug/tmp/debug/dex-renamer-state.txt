@@ -1,0 +1,4 @@
+#Tue Jul 11 11:45:15 KST 2023
+base.0=C\:\\Users\\user\\Documents\\GitHub\\nbCamp2\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
