@@ -19,7 +19,7 @@ class MyPage extends StatelessWidget {
         onPressed: () {},
       ),
       appBar: AppBar(
-          title: Text('Image widget'),
+          title: Text(''),
           elevation: 0,
           backgroundColor: Colors.white,
           leadingWidth: 75,
@@ -53,145 +53,229 @@ class MyPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(
-                  "https://cdn-icons-png.flaticon.com/512/188/188987.png?w=826&t=st=1689056998~exp=1689057598~hmac=7e20f8df6111b8611d0a4ef66fe147a3ab72d081e7eb4aff7a38508179afd927",
-                  width: 150,
-                  height: 200,
+                CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      "https://img.dmitory.com/img/201911/2wX/oNk/2wXoNkdn88oWmguAk6yWwW.jpg"),
+                  backgroundColor: Colors.transparent,
+                  radius: 100,
                 ), // 메인사진 위치
                 Text(
                   '이   름',
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500),
                 ),
-                Text(
-                  '영어  닉네임',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      '생년월일',
-                      style: TextStyle(
-                          fontSize: 17, fontWeight: FontWeight.w600, height: 2),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '1997.06.02',
-                      style: TextStyle(fontSize: 25),
-                    ),
-                  ],
-                ),
-                Container(
-                  width: 380,
-                  margin: EdgeInsets.only(top: 0.2),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.8,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '이메일주소',
-                      style: TextStyle(
-                          fontSize: 17, fontWeight: FontWeight.w600, height: 2),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'abcd1234@gmail.com',
-                      style: TextStyle(fontSize: 25),
-                    ),
-                  ],
-                ),
-                Container(
-                  width: 380,
-                  margin: EdgeInsets.only(top: 0.2),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.8,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '사는 곳',
-                      style: TextStyle(
-                          fontSize: 17, fontWeight: FontWeight.w600, height: 2),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '한국',
-                      style: TextStyle(
-                        fontSize: 25,
+                    Container(
+                      height: 400,
+                      width: double.infinity,
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 219, 211, 211),
+                          borderRadius: BorderRadius.circular(20)),
+                      child: RichText(
+                        text: const TextSpan(
+                          children: [
+                            TextSpan(
+                              text: ('닉네임'),
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.black,
+                              ),
+                            ),
+                            WidgetSpan(
+                              child: SizedBox(
+                                width: 25,
+                              ),
+                            ),
+                            WidgetSpan(
+                              child: Icon(Icons.celebration),
+                            ),
+                            TextSpan(
+                              text: ('생년월일'),
+                              style: TextStyle(
+                                fontSize: 30,
+                                color: Colors.black,
+                              ),
+                            ),
+                            WidgetSpan(
+                              child: SizedBox(
+                                width: 25,
+                              ),
+                            ),
+                            TextSpan(
+                              text: ('1234.56.78'),
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black,
+                              ),
+                            ),
+                            WidgetSpan(
+                              child: SizedBox(
+                                width: 25,
+                              ),
+                            ),
+                            TextSpan(
+                              children: [
+                                WidgetSpan(
+                                  child: Icon(Icons.alternate_email),
+                                ),
+                                TextSpan(
+                                  text: ('이메일 주소'),
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                    width: 25,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: ('abcd@gmail.com'),
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                                WidgetSpan(
+                                  child: SizedBox(
+                                    width: 25,
+                                  ),
+                                ),
+                                TextSpan(
+                                  children: [
+                                    WidgetSpan(
+                                      child: Icon(Icons.public),
+                                    ),
+                                    TextSpan(
+                                      text: ('사는 곳'),
+                                      style: TextStyle(
+                                        fontSize: 30,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    WidgetSpan(
+                                      child: SizedBox(
+                                        width: 25,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      text: ('대한민국'),
+                                      style: TextStyle(
+                                        fontSize: 20,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    WidgetSpan(
+                                      child: SizedBox(
+                                        width: 25,
+                                      ),
+                                    ),
+                                    TextSpan(
+                                      children: [
+                                        WidgetSpan(
+                                          child: Icon(Icons.info_outline),
+                                        ),
+                                        TextSpan(
+                                          text: ('MBTI'),
+                                          style: TextStyle(
+                                            fontSize: 30,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        WidgetSpan(
+                                          child: SizedBox(
+                                            width: 25,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: ('ABCD'),
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            color: Colors.black,
+                                          ),
+                                        ),
+                                        WidgetSpan(
+                                          child: SizedBox(
+                                            width: 25,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          children: [
+                                            WidgetSpan(
+                                              child: Icon(Icons.favorite),
+                                            ),
+                                            TextSpan(
+                                              text: ('좋아하는 것'),
+                                              style: TextStyle(
+                                                fontSize: 30,
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            WidgetSpan(
+                                              child: SizedBox(
+                                                width: 25,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              text: ('ABCD'),
+                                              style: TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.black,
+                                              ),
+                                            ),
+                                            WidgetSpan(
+                                              child: SizedBox(
+                                                width: 25,
+                                              ),
+                                            ),
+                                            TextSpan(
+                                              children: [
+                                                WidgetSpan(
+                                                  child: Icon(Icons.star),
+                                                ),
+                                                TextSpan(
+                                                  text: ('취미'),
+                                                  style: TextStyle(
+                                                    fontSize: 30,
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                                WidgetSpan(
+                                                  child: SizedBox(
+                                                    width: 25,
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: ('ABCD'),
+                                                  style: TextStyle(
+                                                    fontSize: 20,
+                                                    color: Colors.black,
+                                                  ),
+                                                ),
+                                                WidgetSpan(
+                                                  child: SizedBox(
+                                                    width: 25,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
-                ),
-                Container(
-                  width: 380,
-                  margin: EdgeInsets.only(top: 0.2),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.8,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'MBTI',
-                      style: TextStyle(
-                          fontSize: 17, fontWeight: FontWeight.w600, height: 2),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Text(
-                      'ABCD',
-                      style: TextStyle(fontSize: 25),
-                    ),
-                  ],
-                ),
-                Container(
-                  width: 380,
-                  margin: EdgeInsets.only(top: 0.2),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.8,
-                  ),
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '취미',
-                      style: TextStyle(
-                          fontSize: 17, fontWeight: FontWeight.w600, height: 2),
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Text(
-                      '노래부르기',
-                      style: TextStyle(fontSize: 25),
-                    ),
-                  ],
-                ),
-                Container(
-                  width: 380,
-                  margin: EdgeInsets.only(top: 0.2),
-                  child: Divider(
-                    color: Colors.black,
-                    thickness: 0.8,
-                  ),
                 ),
               ],
             ),
